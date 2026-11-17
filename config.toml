@@ -90,12 +90,15 @@ y = [
   ":sh zellij pipe --name external_tui_exit -- %sh{echo $ZELLIJ_PANE_ID}",
 ]
 
-# scooter (CLI): find & replace in the working directory
+# scooter (CLI): find & replace in the working directory. scooter draws on
+# stdout, which :insert-output captures, so it gets the tty for stdin and
+# stdout; leaving it ends the alternate screen, the echo restores it for hx
 r = [
   ":sh zellij pipe --name external_tui_enter -- %sh{echo $ZELLIJ_PANE_ID}",
   ":write-all",
   ":new",
-  ":insert-output scooter",
+  ":insert-output scooter </dev/tty >/dev/tty",
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ":buffer-close!",
   ":redraw",
   ":reload-all",
