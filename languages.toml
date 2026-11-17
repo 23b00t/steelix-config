@@ -1,0 +1,21 @@
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "codebook" ]
+soft-wrap.enable = true
+
+[[language]]
+name = "rust"
+auto-format = false
+language-servers = [ "rust-analyzer", "codebook" ]
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+# checking while typing can be distracting; option requires v0.3.20
+config = { checkWhileTyping = false }

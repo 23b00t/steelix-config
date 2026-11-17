@@ -1,0 +1,3 @@
+# smith's local ownership metadata (machine-specific)
+steel/plugins/registry.scm
+# commit steel/plugins/smith-lock.scm, on the other hand (created via :smith-lock)
