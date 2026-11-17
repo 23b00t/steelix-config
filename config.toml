@@ -26,10 +26,10 @@ normal = "block"
 select = "underline"
 
 [keys.insert]
-esc = ["normal_mode", ":update"]
+esc = ["normal_mode", ":update-named"]
 
 [keys.normal]
-esc = ["collapse_selection", ":update"]
+esc = ["collapse_selection", ":update-named"]
 # Fix issues with my layout
 "A-9" = "rotate_selection_contents_backward"
 "A-0" = "rotate_selection_contents_forward"
@@ -52,7 +52,7 @@ S-up = [
 "Z" = ":xa"
 
 [keys.select]
-esc = ["collapse_selection", "normal_mode", ":update"]
+esc = ["collapse_selection", "normal_mode", ":update-named"]
 # Fix issues with my layout
 "A-9" = "rotate_selection_contents_backward"
 "A-0" = "rotate_selection_contents_forward"

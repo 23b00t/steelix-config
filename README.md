@@ -7,14 +7,13 @@ Plugin management: [smith.hx](https://github.com/kn66/smith.hx).
 |---|---|
 | `config.toml`, `languages.toml` | regular Helix config (taken over from hIDE) |
 | `init.scm` | plugin declarations via smith |
-| `helix.scm` | exposes `:smith-*` commands |
+| `helix.scm` | exposes `:smith-*` commands and `:update-named` (Esc saves the buffer, skips scratch buffers) |
 
 ## Plugins
 
 | Plugin | Purpose | Usage |
 |---|---|---|
 | [forest.hx](https://github.com/Ra77a3l3-jar/forest.hx) | file tree | `Space e` / `:forest-open` |
-| [scopeline.hx](https://github.com/Ra77a3l3-jar/scopeline.hx) | breadcrumbs | `:scopeline-toggle` |
 | [zj-navigator.hx](https://github.com/dmyyy/zj-navigator.hx) | Helix splits ↔ Zellij panes | `A-h/j/k/l` |
 | [notify.hx](https://github.com/chuwy/notify.hx) | notification popups | `:notify "…"` |
 | [glyph.hx](https://github.com/Ra77a3l3-jar/glyph.hx) | Nerd Font icon library | – |

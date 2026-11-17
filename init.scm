@@ -11,7 +11,7 @@
                   smith-init))
 
 ;; ---------------------------------------------------------------------------
-;; Libraries (also pulled in as dependencies of forest/scopeline,
+;; Libraries (also pulled in as dependencies of forest,
 ;; declared explicitly here so they are managed by smith)
 ;; ---------------------------------------------------------------------------
 
@@ -36,17 +36,6 @@
    (forest-snack-circular-keybinds #t))
   (bind
    ("normal" ("space" "e") ":forest-open")))
-
-;; ---------------------------------------------------------------------------
-;; scopeline.hx – breadcrumb bar (:scopeline-toggle)
-;; ---------------------------------------------------------------------------
-(smith-plugin "Ra77a3l3-jar/scopeline.hx"
-  (config
-   (scopeline-configure! #:separator " › "
-                         #:max-depth 0
-                         #:show-file? #t
-                         #:position 'top-left
-                         #:always-reserved? #t)))
 
 ;; ---------------------------------------------------------------------------
 ;; zj-navigator.hx – A-h/j/k/l across Helix splits and Zellij panes

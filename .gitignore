@@ -1,3 +1,5 @@
-# smith's local ownership metadata (machine-specific)
+# smith's local state (machine-specific). Untracked files here would also stop
+# NoX's boot sync from pulling (it pulls only into a clean checkout)
 steel/plugins/registry.scm
+steel/plugins/.last-command.*
 # commit steel/plugins/smith-lock.scm, on the other hand (created via :smith-lock)
